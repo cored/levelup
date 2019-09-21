@@ -15,6 +15,11 @@ Example 2:
 Note:
 You may assume the string contains only lowercase alphabets.
 
+# Follow Up
+
+- What if the strings contain unicode character?
+  The solution won't work
+
 # Solution
 
 - Sort both list of characters and compare them
