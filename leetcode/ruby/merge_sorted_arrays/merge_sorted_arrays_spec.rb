@@ -6,19 +6,24 @@ module MergeSortedArrays
   end
 
   def merge(nums1, nums2, aux_size, aux = [], idx = 0, jdx = 0)
-    return aux if aux.size == aux_size
-    if nums1[idx] < nums2[jdx]
+    while idx < nums1.size && jdx < nums2.size
+      if nums1[idx] < nums2[jdx]
+        aux << nums1[idx]
+        idx += 1
+      else
+        aux << nums2[jdx]
+        jdx += 1
+      end
+    end
+    while idx < nums1.size
       aux << nums1[idx]
       idx += 1
-    elsif nums1[idx] > nums2[jdx]
+    end
+    while jdx < nums2.size
       aux << nums2[jdx]
-      jdx += 1
-    else
-      aux << nums2[jdx]
-      idx += 1
       jdx += 1
     end
-    merge(nums1, nums2, aux_size, aux, idx, jdx)
+    aux
   end
 end
 
