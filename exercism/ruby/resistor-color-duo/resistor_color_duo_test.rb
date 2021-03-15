@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'resistor_color_duo'
 
 # Common test data version: 2.1.0 00dda3a

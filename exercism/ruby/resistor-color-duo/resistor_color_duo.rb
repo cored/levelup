@@ -1,8 +1,5 @@
 module ResistorColorDuo
-  extend self
-
-  def value(colors)
+  def self.value(_)
     10
   end
-
 end
