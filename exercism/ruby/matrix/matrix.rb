@@ -15,7 +15,6 @@ class Matrix
   end
 
   def rows
-    [[1, 2]]
     matrix.split(/\n/).map do |row|
       row.scan(/\d/).map(&:to_i)
     end
