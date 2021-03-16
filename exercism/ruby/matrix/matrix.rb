@@ -16,6 +16,13 @@ class Matrix
 
   def rows
     [[1, 2]]
+    matrix.split(/\n/).map do |row|
+      row.scan(/\d/).map(&:to_i)
+    end
   end
+
+  private
+
+  attr_reader :matrix
 
 end
