@@ -2,7 +2,20 @@ module MaxConsecutiveOnes
   extend self
 
   def call(nums)
-    nums.count(1)
+    max = 0
+    ones = 0
+
+    nums.each do |n|
+      if n == 1
+        ones += 1
+      else
+        ones = 0
+      end
+      max = [max, ones].max
+
+    end
+
+    max
   end
 end
 
@@ -16,6 +29,8 @@ RSpec.describe MaxConsecutiveOnes do
       [0, 1] => 1,
       [0, 1, 1] => 2,
       [0, 1, 1, 1] => 3,
+      [1, 0, 1, 1, 1] => 3,
+      [1, 1, 0, 1, 1, 1] => 3,
     }
   end
 
