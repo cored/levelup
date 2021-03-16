@@ -13,7 +13,7 @@ class Matrix
   end
 
   def columns
-    []
+    matrix.map { |row| row.map { |col| col } }
   end
 
   def rows
