@@ -2,7 +2,7 @@ module MaxConsecutiveOnes
   extend self
 
   def call(nums)
-    0
+    nums.count(1)
   end
 end
 
@@ -12,6 +12,7 @@ RSpec.describe MaxConsecutiveOnes do
     {
       [] => 0,
       [0] => 0,
+      [1] => 1
     }
   end
 
