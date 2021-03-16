@@ -16,7 +16,7 @@ class Matrix
 
   def rows
     matrix.split(/\n/).map do |row|
-      row.scan(/\d/).map(&:to_i)
+      row.split(/\s/).map(&:to_i)
     end
   end
 
