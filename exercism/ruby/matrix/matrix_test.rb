@@ -8,9 +8,8 @@ class MatrixTest < Minitest::Test
   end
 
   def test_extract_same_row_again
-    # skip
-    # matrix = Matrix.new("9 7\n8 6")
-    # assert_equal [9, 7], matrix.rows[0]
+    matrix = Matrix.new("9 7\n8 6")
+    assert_equal [9, 7], matrix.rows[0]
   end
 
   def test_extract_other_row
