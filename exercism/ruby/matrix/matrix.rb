@@ -7,7 +7,9 @@ To get started with TDD, see the `README.md` file in your
 =end
 class Matrix
   def initialize(matrix)
-    @matrix = matrix
+    @matrix = matrix.split(/\n/).map do |row|
+      row.split(/\s/).map(&:to_i)
+    end
   end
 
   def columns
@@ -15,9 +17,7 @@ class Matrix
   end
 
   def rows
-    matrix.split(/\n/).map do |row|
-      row.split(/\s/).map(&:to_i)
-    end
+    matrix.map { |row| row }
   end
 
   private
