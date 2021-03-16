@@ -11,6 +11,7 @@ RSpec.describe MaxConsecutiveOnes do
   let(:cases) do
     {
       [] => 0,
+      [0] => 0,
     }
   end
 
